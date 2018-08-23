@@ -18,6 +18,9 @@
     <ClCompile Include="cyzg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="BBox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector.h">
