@@ -75,6 +75,8 @@ public:
 	}
 };
 
+using Point = Vector;
+
 Vector operator*(double s, const Vector& v)
 {
 	return v * s;

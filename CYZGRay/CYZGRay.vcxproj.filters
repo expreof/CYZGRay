@@ -32,5 +32,8 @@
     <ClInclude Include="BBox.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="cyzg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #include "BBox.h"
 
-BBox Union(const BBox & b, const Vector & p)
+BBox Union(const BBox & b, const Point & p)
 {
 	BBox ret = b;
 	ret.pMin.x = std::min(b.pMin.x, p.x);
@@ -22,4 +22,12 @@ BBox Union(const BBox & b, const BBox & b2)
 	ret.pMax.y = std::max(b.pMax.y, b2.pMax.y);
 	ret.pMax.z = std::max(b.pMax.z, b2.pMax.z);
 	return ret;
+}
+
+inline bool BBox::Overlaps(const BBox & b) const
+{
+	bool x = (pMax.x >= b.pMin.x) && (pMin.x <= b.pMax.x);
+	bool y = (pMax.y >= b.pMin.y) && (pMin.y <= b.pMax.y);
+	bool z = (pMax.z >= b.pMin.z) && (pMin.z <= b.pMax.z);
+	return (x && y && z);
 }
